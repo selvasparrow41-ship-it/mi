@@ -1,21 +1,916 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO Optimization -->
-    <title>FixSpin | Premium Blender, Grinder & Mixer Repair Services</title>
-    <meta name="description" content="FixSpin offers professional, high-speed repair and maintenance services for blenders, mixers, and grinders. Seamless booking, transparent pricing, and expert technicians." />
-    
-    <!-- Premium Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Optimization -->
+  <title>FixSpin | Premium Blender, Grinder & Mixer Repair Services</title>
+  <meta name="description"
+    content="FixSpin offers professional, high-speed repair and maintenance services for blenders, mixers, and grinders. Seamless booking, transparent pricing, and expert technicians." />
+
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MixieFix | Premium Mixer Grinder & Tabletop Grinder Repair Seva</title>
+
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- React, ReactDOM, Babel for browser compilation -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    /* Embed full premium style variables and styling specs */
+    :root {
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --transition-speed: 0.3s;
+      --transition-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --border-radius-sm: 8px;
+      --border-radius-md: 16px;
+      --border-radius-lg: 24px;
+      --glow-amber: 0 0 25px rgba(255, 153, 51, 0.45);
+      --glow-cyan: 0 0 25px rgba(0, 245, 255, 0.4);
+
+      /* Theme: Dark is default for absolute premium WOW factor */
+      --bg-primary: #070a13;
+      --bg-secondary: #0f1422;
+      --bg-tertiary: #192033;
+      --glass-surface: rgba(15, 20, 34, 0.65);
+      --glass-border: rgba(30, 41, 59, 0.75);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #64748b;
+
+      --accent-primary: #ff9933;
+      --accent-primary-hover: #e07a12;
+      --accent-secondary: #00f5ff;
+
+      --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      --inset-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    [data-theme='light'] {
+      --bg-primary: #f6f9fc;
+      --bg-secondary: #ffffff;
+      --bg-tertiary: #edf2f7;
+      --glass-surface: rgba(255, 255, 255, 0.75);
+      --glass-border: rgba(226, 232, 240, 0.8);
+
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+
+      --accent-primary: #ff9933;
+      --accent-primary-hover: #e07a12;
+      --accent-secondary: #0ea5e9;
+
+      --card-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+      --inset-shadow: inset 0 2px 4px rgba(15, 23, 42, 0.03);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* Core Utility Classes */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .glass {
+      background: var(--glass-surface);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--card-shadow);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 12px 28px;
+      border-radius: var(--border-radius-md);
+      border: none;
+      cursor: pointer;
+      transition: transform var(--transition-speed) var(--transition-elastic),
+        box-shadow var(--transition-speed) ease,
+        background-color var(--transition-speed) ease,
+        color var(--transition-speed) ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--glow-amber);
+    }
+
+    .btn-secondary {
+      background-color: var(--bg-tertiary);
+      color: var(--text-primary);
+      border: 1px solid var(--glass-border);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--text-muted);
+      color: var(--bg-primary);
+      transform: translateY(-2px);
+    }
+
+    .btn-icon {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--glass-surface);
+      border: 1px solid var(--glass-border);
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all var(--transition-speed) ease;
+    }
+
+    .btn-icon:hover {
+      transform: scale(1.08) rotate(15deg);
+      background-color: var(--bg-tertiary);
+      border-color: var(--accent-primary);
+    }
+
+    .pulse-indicator {
+      width: 10px;
+      height: 10px;
+      background-color: #10b981;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+    }
+
+    .pulse-indicator::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #10b981;
+      animation: pulse-ring 1.8s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.5);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(2.8);
+        opacity: 0;
+      }
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    [data-theme='dark'] .gradient-text {
+      background: linear-gradient(135deg, #ffffff 40%, var(--accent-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Page Navigation Adjustments */
+    .nav-link {
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      cursor: pointer;
+      transition: color var(--transition-speed) ease;
+    }
+
+    .nav-link.active {
+      font-weight: 700;
+      color: var(--accent-primary);
+    }
+
+    .footer-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .footer-link:hover {
+      color: var(--accent-primary) !important;
+      transform: translateX(4px);
+    }
+
+    /* Layout styling responsive */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .tech-spotlight-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .tech-card-hover:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-primary) !important;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr !important;
+      }
+
+      .tech-spotlight-grid {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      .desktop-nav {
+        display: flex !important;
+        gap: 32px;
+        align-items: center;
+      }
+
+      #desktop-cta {
+        display: inline-flex !important;
+        padding: 8px 20px;
+        font-size: 0.85rem;
+      }
+
+      .mobile-menu-btn {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+
+      .faq-grid {
+        grid-template-columns: 0.8fr 1.2fr !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- React code with Babel transpiler -->
+  <script type="text/babel">
+    const { useState, useEffect, createContext, useContext } = React;
+
+    // --- 1. MOCK DATA ---
+    const serviceDetails = [
+      {
+        id: 'mixie-repair',
+        name: 'Mixer Grinder (Mixie) Repair',
+        type: 'mixie',
+        description: 'Complete diagnostic and mechanical fixes for mixer grinders. We replace coupler hubs, fix speed regulators, and calibration armature coils.',
+        commonIssues: [
+          'Mixie coupler gear stripped or broken',
+          'Tripping red OLP reset switch at bottom',
+          'Jar base leaking or motor smelling of hot plastic',
+          'Heavy armature motor sparking'
+        ],
+        tiers: [
+          { id: 'mixie-tier-quick', name: 'Quick Tune', price: '₹199', turnaround: 'Same Day' },
+          { id: 'mixie-tier-std', name: 'Standard Resto-Fix', price: '₹499', turnaround: '24 Hours' },
+          { id: 'mixie-tier-prem', name: 'Premium Restoration', price: '₹999', turnaround: '2 Days' }
+        ]
+      },
+      {
+        id: 'wet-grinder-repair',
+        name: 'Tabletop Wet Grinder Services',
+        type: 'wet_grinder',
+        description: 'Dosa & Idli tabletop wet grinders belt swaps, shaft replacements, center bush repairs, and stone alignments.',
+        commonIssues: [
+          'Grinder rollers/stones stopped rotating',
+          'Main drive belt loose or squeaking',
+          'Locked motor making heavy humming noises',
+          'Defective roller shaft lock springs'
+        ],
+        tiers: [
+          { id: 'wet-grinder-tier-quick', name: 'Belt Swap', price: '₹249', turnaround: 'Immediate' },
+          { id: 'wet-grinder-tier-std', name: 'Restoration Overhaul', price: '₹699', turnaround: '24 Hours' },
+          { id: 'wet-grinder-tier-prem', name: 'Motor Rewind Core', price: '₹1499', turnaround: '3 Days' }
+        ]
+      },
+      {
+        id: 'juicer-repair',
+        name: 'Juicer & Food Processor Overhaul',
+        type: 'juicer',
+        description: 'Restore high-frequency Sujata JMG, citrus extractors, and planetary food processors back to operational specs.',
+        commonIssues: [
+          'Safety switch lock assembly jammed',
+          'Centrifugal mesh sieve blocked/dull',
+          'Planetary gear speed regulator failures',
+          'Total power failure or high coil smell'
+        ],
+        tiers: [
+          { id: 'juicer-tier-quick', name: 'Mesh Tune & Clean', price: '₹299', turnaround: 'Same Day' },
+          { id: 'juicer-tier-std', name: 'Pro Speed Resto', price: '₹799', turnaround: '24 Hours' },
+          { id: 'juicer-tier-prem', name: 'Full motor swap', price: '₹1299', turnaround: '3 Days' }
+        ]
+      }
+    ];
+
+    const technicians = [
+      { id: 'tech-ramesh', name: 'Ramesh Kumar', specialty: ['Mixer Grinders', 'Bushings'], rating: 4.9, experience: 15, avatar: 'https://images.unsplash.com/photo-1540569014015-19a7be504e3a?w=150&auto=format&fit=crop&q=80', status: 'available' },
+      { id: 'tech-suresh', name: 'K. Suresh', specialty: ['Heavy Rewind', 'Table Grinders'], rating: 4.8, experience: 10, avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&auto=format&fit=crop&q=80', status: 'available' },
+      { id: 'tech-ananth', name: 'Ananth Rao', specialty: ['Sujata JMG', 'Food Processors'], rating: 5.0, experience: 12, avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80', status: 'busy' }
+    ];
+
+    const serviceAreas = [
+      'Indiranagar & Hal Layout',
+      'Koramangala 4th Block',
+      'Jayanagar & JP Nagar',
+      'Whitefield & ITPL',
+      'HSR Layout & Bellandur',
+      'Malleshwaram'
+    ];
+
+    const faqs = [
+      { id: 'faq-1', question: 'How long does a mixie coupling swap take?', answer: 'A coupler swap is completed in under 2 hours. If you drop it off at our local Indiranagar hub or order home diagnostic dispatch, it can be resolved same-day.', category: 'repair' },
+      { id: 'faq-2', question: 'What is covered under the MixieFix Seva warranty?', answer: 'All Standard overhauls carry a 90-day comprehensive mechanical coverage, while our Premium Motor Rewinding services feature a full 2-Year comprehensive warranty on copper winding armature parts.', category: 'warranty' },
+      { id: 'faq-3', question: 'Is the checkup fee waived if I proceed with repairs?', answer: 'Yes! We charge a minimal check-up charge of ₹99 only if you decide not to proceed. If you proceed with our repair seva, the diagnostic check-up charge is completely waived!', category: 'pricing' },
+      { id: 'faq-4', question: 'Do you use original spare parts for Sujata, Preethi, and Elgi Ultra?', answer: 'Absolutely. We source genuine manufacturer bushes, speed switches, carbon carbon brushes, and gears specifically optimized for Indian brands such as Preethi, Elgi Ultra, Sujata, Maharaja, Butterfly, and Vidiem.', category: 'general' }
+    ];
+
+    // --- 2. CONTEXTS ---
+    const ThemeContext = createContext();
+    const BookingContext = createContext();
+
+    const ThemeProvider = ({ children }) => {
+      const [theme, setTheme] = useState('dark');
+
+      const toggleTheme = () => {
+        const nextTheme = theme === 'light' ? 'dark' : 'light';
+        setTheme(nextTheme);
+        document.documentElement.setAttribute('data-theme', nextTheme);
+      };
+
+      return (
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+          {children}
+        </ThemeContext.Provider>
+      );
+    };
+
+    const BookingProvider = ({ children }) => {
+      const [bookings, setBookings] = useState([]);
+      const [isSubmitting, setIsSubmitting] = useState(false);
+
+      const createBooking = (details) => {
+        setIsSubmitting(true);
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            const ticketId = 'MF-' + Math.floor(100000 + Math.random() * 900000);
+            const newBooking = {
+              ...details,
+              id: ticketId,
+              status: 'confirmed'
+            };
+            setBookings(prev => [newBooking, ...prev]);
+            setIsSubmitting(false);
+            resolve(newBooking);
+          }, 1500);
+        });
+      };
+
+      return (
+        <BookingContext.Provider value={{ bookings, createBooking, isSubmitting }}>
+          {children}
+        </BookingContext.Provider>
+      );
+    };
+
+    // --- 3. PAGES ---
+
+    // Header Component
+    const Header = ({ currentPage, setCurrentPage }) => {
+      const { theme, toggleTheme } = useContext(ThemeContext);
+      const [menuOpen, setMenuOpen] = useState(false);
+
+      return (
+        <header className="glass" style={{ position: 'sticky', top: 0, zIndex: 100, borderBottom: '1px solid var(--glass-border)' }}>
+          <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '76px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer' }} onClick={() => setCurrentPage('home')}>
+              <div style={{
+                background: 'linear-gradient(135deg, #ff9933 0%, #ff5e00 100%)',
+                color: '#fff', width: '40px', height: '40px', borderRadius: '12px',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                boxShadow: 'var(--glow-amber)', fontWeight: '800', fontSize: '1.25rem'
+              }}>MF</div>
+              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '1.4rem' }}>
+                Mixie<span style={{ color: '#ff9933' }}>Fix</span>
+              </span>
+            </div>
+
+            <nav style={{ display: 'none' }} className="desktop-nav">
+              <span className={`nav-link ${currentPage === 'home' ? 'active' : ''}`} onClick={() => setCurrentPage('home')}>Home</span>
+              <span className={`nav-link ${currentPage === 'services' ? 'active' : ''}`} onClick={() => setCurrentPage('services')}>Repair Pricing</span>
+              <span className={`nav-link ${currentPage === 'booking' ? 'active' : ''}`} onClick={() => setCurrentPage('booking')}>Book Seva</span>
+              <span className={`nav-link ${currentPage === 'faq' ? 'active' : ''}`} onClick={() => setCurrentPage('faq')}>FAQ & Warranty</span>
+            </nav>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <button onClick={toggleTheme} className="btn-icon" aria-label="Toggle Theme">
+                {theme === 'light' ? '🌙' : '☀️'}
+              </button>
+
+              <button onClick={() => setCurrentPage('booking')} className="btn btn-primary" id="desktop-cta" style={{ display: 'none', backgroundColor: '#ff9933' }}>
+                Book Seva
+              </button>
+
+              <button onClick={() => setMenuOpen(!menuOpen)} className="btn-icon mobile-menu-btn">
+                ☰
+              </button>
+            </div>
+          </div>
+
+          {menuOpen && (
+            <div className="glass" style={{ position: 'absolute', top: '76px', left: 0, right: 0, padding: '24px', display: 'flex', flexDirection: 'column', gap: '20px', zIndex: 99 }}>
+              <span className="nav-link" onClick={() => { setCurrentPage('home'); setMenuOpen(false); }}>Home</span>
+              <span className="nav-link" onClick={() => { setCurrentPage('services'); setMenuOpen(false); }}>Repair Pricing</span>
+              <span className="nav-link" onClick={() => { setCurrentPage('booking'); setMenuOpen(false); }}>Book Seva</span>
+              <span className="nav-link" onClick={() => { setCurrentPage('faq'); setMenuOpen(false); }}>FAQ & Warranty</span>
+            </div>
+          )}
+        </header>
+      );
+    };
+
+    // Home Page View
+    const HomeView = ({ setCurrentPage, setPreselectAppliance }) => {
+      return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '80px', paddingBottom: '80px' }}>
+          {/* Hero segment */}
+          <section style={{ padding: '80px 0', background: 'radial-gradient(circle at top right, rgba(255, 153, 51, 0.08), transparent 40%)' }}>
+            <div className="container hero-grid">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                  <span className="pulse-indicator"></span>
+                  <span style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', color: '#ff9933' }}>Active Bangalore Engineers</span>
+                </div>
+
+                <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: '1.1' }}>
+                  Mixie & Table Grinder Repairs<br />
+                  <span className="gradient-text">Restored to OEM Spec.</span>
+                </h1>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '550px' }}>
+                  High-speed professional diagnostics for Indian Mixer Grinders (Mixies) and tabletop wet grinders in Bengaluru. Waived checkup fee.
+                </p>
+                <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                  <button onClick={() => setCurrentPage('booking')} className="btn btn-primary" style={{ backgroundColor: '#ff9933' }}>Book Seva Ticket</button>
+                  <button onClick={() => setCurrentPage('services')} className="btn btn-secondary">View Pricing</button>
+                </div>
+              </div>
+
+              {/* Graphic cards */}
+              <div className="glass" style={{ borderRadius: 'var(--border-radius-lg)', padding: '32px', border: '1px solid var(--glass-border)' }}>
+                <h3 style={{ marginBottom: '24px', fontSize: '1.1rem' }}>Active Diagnostic Calibration</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px', fontSize: '0.9rem' }}>
+                      <span>Preethi Jar Coupling Torque</span>
+                      <span>18,000 RPM</span>
+                    </div>
+                    <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--bg-tertiary)', borderRadius: '3px', overflow: 'hidden' }}>
+                      <div style={{ width: '90%', height: '100%', backgroundColor: '#ff9933' }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px', fontSize: '0.9rem' }}>
+                      <span>Ultra Table Stone Alignment</span>
+                      <span>Perfect Sync</span>
+                    </div>
+                    <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--bg-tertiary)', borderRadius: '3px', overflow: 'hidden' }}>
+                      <div style={{ width: '100%', height: '100%', backgroundColor: '#10b981' }}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Highlights */}
+          <section className="container">
+            <h2 style={{ textAlign: 'center', fontSize: '2rem', marginBottom: '48px' }}>Engineered for Indian Kitchen Needs</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px' }}>
+              <div className="glass" style={{ padding: '32px', borderRadius: 'var(--border-radius-md)' }}>
+                <div style={{ fontSize: '2.5rem', marginBottom: '16px' }}>🔧</div>
+                <h3 style={{ marginBottom: '8px' }}>₹99 Waived Checkup</h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Proceed with any standard repair seva and the initial ₹99 review fee is completely waived.</p>
+              </div>
+              <div className="glass" style={{ padding: '32px', borderRadius: 'var(--border-radius-md)' }}>
+                <div style={{ fontSize: '2.5rem', marginBottom: '16px' }}>🛡️</div>
+                <h3 style={{ marginBottom: '8px' }}>2-Year Motor Warranties</h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Armature rewinding and copper coil restorations are secured by extensive warranties.</p>
+              </div>
+              <div className="glass" style={{ padding: '32px', borderRadius: 'var(--border-radius-md)' }}>
+                <div style={{ fontSize: '2.5rem', marginBottom: '16px' }}>💎</div>
+                <h3 style={{ marginBottom: '8px' }}>OEM original brand Spares</h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>We only utilize authentic spare parts. No cheap aftermarket alternatives.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Technicians */}
+          <section className="container">
+            <div className="tech-spotlight-grid">
+              <div>
+                <h2 style={{ fontSize: '2rem', marginBottom: '16px' }}>Certified Mixer Grinder Gurus</h2>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '24px' }}>Track scheduling availability in real time. Tabletop stone calibrations, carbon brush tuning, and motor armature rewinds done instantly.</p>
+                <button onClick={() => setCurrentPage('booking')} className="btn btn-secondary">Select Expert Technician</button>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {technicians.map(t => (
+                  <div key={t.id} className="glass tech-card-hover" style={{ padding: '16px', borderRadius: 'var(--border-radius-md)', display: 'flex', gap: '16px', alignItems: 'center' }}>
+                    <img src={t.avatar} alt={t.name} style={{ width: '56px', height: '56px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #ff9933' }} />
+                    <div style={{ flex: 1 }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <h4 style={{ fontWeight: '700' }}>{t.name}</h4>
+                        <span style={{ fontSize: '0.75rem', padding: '2px 8px', borderRadius: '10px', backgroundColor: t.status === 'available' ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 68, 0.1)', color: t.status === 'available' ? '#10b981' : '#ef4444' }}>{t.status}</span>
+                      </div>
+                      <span style={{ fontSize: '0.8rem', color: '#ff9933' }}>{t.specialty.join(', ')}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </div>
+      );
+    };
+
+    // Services View
+    const ServicesView = ({ setCurrentPage, setPreselectAppliance }) => {
+      const [activeTab, setActiveTab] = useState('all');
+
+      return (
+        <div style={{ padding: '64px 0 80px 0' }} className="container">
+          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+            <h1 style={{ fontSize: '2.5rem' }}>Transparent Pricing Tiers</h1>
+            <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>Choose the service speed and depth of diagnostic restoring required.</p>
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '40px' }}>
+            {['all', 'mixie', 'wet_grinder', 'juicer'].map(tab => (
+              <button key={tab} onClick={() => setActiveTab(tab)} className="btn" style={{
+                borderRadius: '30px', padding: '8px 20px', fontSize: '0.85rem',
+                backgroundColor: activeTab === tab ? '#ff9933' : 'var(--bg-secondary)',
+                color: activeTab === tab ? '#fff' : 'var(--text-secondary)'
+              }}>{tab === 'all' ? 'All Appliances' : tab === 'mixie' ? 'Mixies' : tab === 'wet_grinder' ? 'Wet Grinders' : 'Juicers'}</button>
+            ))}
+          </div>
+
+          <div className="services-grid">
+            {serviceDetails.filter(s => activeTab === 'all' || s.type === activeTab).map(s => (
+              <div key={s.id} className="glass" style={{ borderRadius: 'var(--border-radius-lg)', padding: '24px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <h3 style={{ fontSize: '1.25rem' }}>{s.name}</h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{s.description}</p>
+
+                <div style={{ marginTop: 'auto' }}>
+                  <h4 style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '8px' }}>Pricing Tiers</h4>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    {s.tiers.map(t => (
+                      <div key={t.id} style={{ display: 'flex', justifyContent: 'space-between', padding: '8px', border: '1px solid var(--glass-border)', borderRadius: '8px' }}>
+                        <span>{t.name} ({t.turnaround})</span>
+                        <strong style={{ color: '#ff9933' }}>{t.price}</strong>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <button onClick={() => {
+                  setPreselectAppliance({ type: s.type, tier: s.tiers[1].id });
+                  setCurrentPage('booking');
+                }} className="btn btn-primary" style={{ marginTop: '16px', backgroundColor: '#ff9933' }}>Book Seva</button>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    };
+
+    // Booking View
+    const BookingView = ({ preselectAppliance }) => {
+      const { createBooking, isSubmitting } = useContext(BookingContext);
+      const [wizardStep, setWizardStep] = useState(1);
+      const [receipt, setReceipt] = useState(null);
+
+      const [formData, setFormData] = useState({
+        clientName: '', clientEmail: '', clientPhone: '',
+        applianceType: preselectAppliance?.type || 'mixie',
+        applianceBrand: '', issueDescription: '',
+        preferredDate: '', preferredTimeSlot: '', serviceArea: ''
+      });
+
+      const [errors, setErrors] = useState({});
+
+      const validate = () => {
+        const newErrors = {};
+        if (!formData.clientName) newErrors.clientName = 'Name is required';
+        if (!formData.clientEmail.includes('@')) newErrors.clientEmail = 'Enter a valid email';
+        if (formData.clientPhone.length < 10) newErrors.clientPhone = 'Enter a 10-digit mobile number';
+        if (!formData.applianceBrand) newErrors.applianceBrand = 'Appliance brand/model is required';
+        if (formData.issueDescription.length < 5) newErrors.issueDescription = 'Describe issue in detail';
+        if (!formData.preferredDate) newErrors.preferredDate = 'Date is required';
+        if (!formData.preferredTimeSlot) newErrors.preferredTimeSlot = 'Time is required';
+        if (!formData.serviceArea) newErrors.serviceArea = 'Region is required';
+        return newErrors;
+      };
+
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        const validationErrors = validate();
+        if (Object.keys(validationErrors).length > 0) {
+          setErrors(validationErrors);
+          return;
+        }
+        setErrors({});
+        const ticket = await createBooking(formData);
+        setReceipt(ticket);
+        setWizardStep(2);
+      };
+
+      return (
+        <div style={{ padding: '64px 0 80px 0' }} className="container">
+          {wizardStep === 1 ? (
+            <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+              <h1 style={{ textAlign: 'center', marginBottom: '24px' }}>Book Seva Appointment</h1>
+
+              <form onSubmit={handleSubmit} className="glass" style={{ padding: '32px', borderRadius: 'var(--border-radius-lg)', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <label>Full Name</label>
+                  <input type="text" placeholder="Sivamurugan" value={formData.clientName} onChange={e => setFormData({ ...formData, clientName: e.target.value })} style={inpStyle(errors.clientName)} />
+                  {errors.clientName && <span style={{ color: '#ef4444', fontSize: '0.8rem' }}>{errors.clientName}</span>}
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <label>Email Address</label>
+                  <input type="email" placeholder="sivamurugan@gmail.com" value={formData.clientEmail} onChange={e => setFormData({ ...formData, clientEmail: e.target.value })} style={inpStyle(errors.clientEmail)} />
+                  {errors.clientEmail && <span style={{ color: '#ef4444', fontSize: '0.8rem' }}>{errors.clientEmail}</span>}
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <label>10-Digit Mobile Number</label>
+                  <input type="text" placeholder="9884012345" value={formData.clientPhone} onChange={e => setFormData({ ...formData, clientPhone: e.target.value })} style={inpStyle(errors.clientPhone)} />
+                  {errors.clientPhone && <span style={{ color: '#ef4444', fontSize: '0.8rem' }}>{errors.clientPhone}</span>}
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <label>Service Area (Bengaluru)</label>
+                  <select value={formData.serviceArea} onChange={e => setFormData({ ...formData, serviceArea: e.target.value })} style={inpStyle(errors.serviceArea)}>
+                    <option value="">Select Service Area</option>
+                    {serviceAreas.map(a => <option key={a} value={a}>{a}</option>)}
+                  </select>
+                  {errors.serviceArea && <span style={{ color: '#ef4444', fontSize: '0.8rem' }}>{errors.serviceArea}</span>}
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <label>Appliance Brand & Model</label>
+                  <input type="text" placeholder="Preethi Blue Leaf, Sujata Dynamix" value={formData.applianceBrand} onChange={e => setFormData({ ...formData, applianceBrand: e.target.value })} style={inpStyle(errors.applianceBrand)} />
+                  {errors.applianceBrand && <span style={{ color: '#ef4444', fontSize: '0.8rem' }}>{errors.applianceBrand}</span>}
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <label>Preferred Date</label>
+                  <input type="date" value={formData.preferredDate} onChange={e => setFormData({ ...formData, preferredDate: e.target.value })} style={inpStyle(errors.preferredDate)} />
+                  {errors.preferredDate && <span style={{ color: '#ef4444', fontSize: '0.8rem' }}>{errors.preferredDate}</span>}
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <label>Time Slot</label>
+                  <select value={formData.preferredTimeSlot} onChange={e => setFormData({ ...formData, preferredTimeSlot: e.target.value })} style={inpStyle(errors.preferredTimeSlot)}>
+                    <option value="">Select Time</option>
+                    <option value="morning">Morning (8am - 12pm)</option>
+                    <option value="afternoon">Afternoon (12pm - 4pm)</option>
+                    <option value="evening">Evening (4pm - 8pm)</option>
+                  </select>
+                  {errors.preferredTimeSlot && <span style={{ color: '#ef4444', fontSize: '0.8rem' }}>{errors.preferredTimeSlot}</span>}
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <label>Issue Details</label>
+                  <textarea rows="3" placeholder="Explain overload switch tripping, gear coupler broken, leak location, speed control failures..." value={formData.issueDescription} onChange={e => setFormData({ ...formData, issueDescription: e.target.value })} style={inpStyle(errors.issueDescription)} />
+                  {errors.issueDescription && <span style={{ color: '#ef4444', fontSize: '0.8rem' }}>{errors.issueDescription}</span>}
+                </div>
+
+                <button type="submit" disabled={isSubmitting} className="btn btn-primary" style={{ justifyContent: 'center', backgroundColor: '#ff9933' }}>
+                  {isSubmitting ? 'Allocating Tech...' : 'Submit Seva Ticket'}
+                </button>
+              </form>
+            </div>
+          ) : (
+            <div style={{ maxWidth: '500px', margin: '0 auto', textAlign: 'center' }}>
+              <div style={{ width: '64px', height: '64px', borderRadius: '50%', backgroundColor: 'rgba(16, 185, 129, 0.1)', color: '#10b981', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', margin: '0 auto 16px auto' }}>✓</div>
+              <h2>Seva Booked Successfully</h2>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '24px' }}>Your MixieFix diagnostic review ticket has been successfully compiled.</p>
+
+              <div className="glass" style={{ padding: '24px', borderRadius: '16px', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', border: '1px solid var(--accent-secondary)' }}>
+                <div><strong>Ticket ID:</strong> <span style={{ color: '#ff9933' }}>{receipt?.id}</span></div>
+                <div><strong>Client Name:</strong> {receipt?.clientName}</div>
+                <div><strong>Appliance Brand:</strong> {receipt?.applianceBrand}</div>
+                <div><strong>Time Schedule:</strong> {receipt?.preferredDate} ({receipt?.preferredTimeSlot})</div>
+                <div><strong>Service Area:</strong> {receipt?.serviceArea}</div>
+                <div style={{ backgroundColor: 'var(--bg-tertiary)', padding: '12px', borderRadius: '8px', display: 'flex', gap: '12px', alignItems: 'center' }}>
+                  <span>👨‍🔧</span>
+                  <div>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block' }}>Allocated Specialist</span>
+                    <strong>Ramesh Kumar (Lead Mixer Grinder Engineer)</strong>
+                  </div>
+                </div>
+              </div>
+
+              <button onClick={() => setWizardStep(1)} className="btn btn-secondary" style={{ marginTop: '24px' }}>Schedule Another</button>
+            </div>
+          )}
+        </div>
+      );
+    };
+
+    const inpStyle = (hasError) => ({
+      width: '100%',
+      padding: '10px 14px',
+      borderRadius: '8px',
+      border: hasError ? '2px solid #ef4444' : '1px solid var(--glass-border)',
+      backgroundColor: 'var(--bg-secondary)',
+      color: 'var(--text-primary)',
+      outline: 'none'
+    });
+
+    // FAQ View
+    const FAQView = () => {
+      const [expanded, setExpanded] = useState('faq-1');
+
+      return (
+        <div style={{ padding: '64px 0 80px 0' }} className="container">
+          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+            <h1>FAQs & Repair Guarantees</h1>
+            <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>All details on diagnostics waivers, OEM compliance, and active parts coverage.</p>
+          </div>
+
+          <div className="faq-grid">
+            <div className="glass" style={{ padding: '32px', borderRadius: '16px', border: '2px solid #ff9933' }}>
+              <span style={{ padding: '4px 8px', borderRadius: '12px', backgroundColor: '#ff9933', fontSize: '0.75rem', fontWeight: 700, color: '#fff' }}>MIXIEFIX GUARANTEE</span>
+              <h3 style={{ margin: '16px 0 8px 0' }}>Restoration Guarantee</h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '16px' }}>We take mechanical tuning seriously. If any restored coupling, governor brush, or coil trips within warranty phases, we fix it completely free.</p>
+              <ul>
+                <li style={{ fontSize: '0.85rem', marginBottom: '4px' }}>✓ Same-day diagnostic waive</li>
+                <li style={{ fontSize: '0.85rem', marginBottom: '4px' }}>✓ Insulated pure-copper parts</li>
+                <li style={{ fontSize: '0.85rem' }}>✓ Comprehensive coverage</li>
+              </ul>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {faqs.map(f => {
+                const isOpen = expanded === f.id;
+                return (
+                  <div key={f.id} className="glass" style={{ borderRadius: '12px', overflow: 'hidden' }}>
+                    <button onClick={() => setExpanded(isOpen ? null : f.id)} style={{ width: '100%', padding: '16px', display: 'flex', justifyContent: 'space-between', background: 'none', border: 'none', color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.95rem', cursor: 'pointer', textAlign: 'left' }}>
+                      <span>{f.question}</span>
+                      <span style={{ color: '#ff9933' }}>{isOpen ? '▲' : '▼'}</span>
+                    </button>
+                    {isOpen && (
+                      <div style={{ padding: '0 16px 16px 16px', color: 'var(--text-secondary)', fontSize: '0.9rem', borderTop: '1px solid var(--glass-border)', paddingTop: '12px' }}>
+                        {f.answer}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      );
+    };
+
+    // Footer Component
+    const Footer = () => {
+      return (
+        <footer style={{ backgroundColor: 'var(--bg-secondary)', borderTop: '1px solid var(--glass-border)', padding: '40px 0 20px 0', marginTop: 'auto' }}>
+          <div className="container" style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '20px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+            <span>&copy; 2026 MixieFix India. All brand names Preethi, Ultra, Sujata are trademarks of their owners.</span>
+            <div style={{ display: 'flex', gap: '16px' }}>
+              <span>Helpline: +91 98840 555-FIX</span>
+              <span>•</span>
+              <span>Bengaluru, India</span>
+            </div>
+          </div>
+        </footer>
+      );
+    };
+
+    // Main App Routing Wrapper
+    const App = () => {
+      const [currentPage, setCurrentPage] = useState('home');
+      const [preselectAppliance, setPreselectAppliance] = useState({ type: 'mixie', tier: 'mixie-tier-std' });
+
+      return (
+        <ThemeProvider>
+          <BookingProvider>
+            <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+            <main style={{ flex: 1 }}>
+              {currentPage === 'home' && <HomeView setCurrentPage={setCurrentPage} setPreselectAppliance={setPreselectAppliance} />}
+              {currentPage === 'services' && <ServicesView setCurrentPage={setCurrentPage} setPreselectAppliance={setPreselectAppliance} />}
+              {currentPage === 'booking' && <BookingView preselectAppliance={preselectAppliance} />}
+              {currentPage === 'faq' && <FAQView />}
+            </main>
+            <Footer />
+          </BookingProvider>
+        </ThemeProvider>
+      );
+    };
+
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(<App />);
+  </script>
+</body>
+
 </html>
